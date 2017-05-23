@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Run App Container') {
       steps {
-        sh 'make app'
+        sh '''make app
+echo "Hi there, I'm going to run a build. Hopefully."'''
       }
     }
     stage('Run Taurus Perf Tests') {
@@ -20,10 +21,13 @@ pipeline {
   post {
     always {
       sh 'make clean'
+      
     }
+    
     unstable {
       echo 'Unstable!'
-      //send an email or post to HipChat/Slack..
+      
     }
+    
   }
 }
