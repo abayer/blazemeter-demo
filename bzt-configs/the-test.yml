@@ -18,7 +18,7 @@ reporting:
 
 scenarios:
   blazemeter-test:
-    default-address: "http://localhost:8888"  # http request defaults scheme, domain, port
+    default-address: "http://localhost:8889"  # http request defaults scheme, domain, port
     headers:
       Upgrade-Insecure-Requests: '1'
       User-Agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'
