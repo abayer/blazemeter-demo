@@ -13,6 +13,11 @@ echo "Hi there, I'm going to run a build. Hopefully."'''
       }
     }
     stage('Deploy') {
+      when {
+        expression {
+          currentBuild.result != "UNSTABLE"
+        }
+      }
       steps {
         echo 'Deploying...'
       }
