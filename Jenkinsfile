@@ -17,9 +17,11 @@ echo "Hi there, I'm going to run a build. Hopefully."'''
         expression {
           currentBuild.result != "UNSTABLE"
         }
+        
       }
       steps {
         echo 'Deploying...'
+        mail(subject: 'Hey, I deployed something. You may regret giving me this power.', body: 'Bwahahahahahahahahahaha*choke*', to: 'abayer@cloudbees.com')
       }
     }
   }
